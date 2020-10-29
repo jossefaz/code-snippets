@@ -1,0 +1,102 @@
+{
+	"Tant que": {
+		"prefix": "tantq",
+		"body": [
+			"TANT QUE ('$condition') FAIRE",
+			"\t$instruction",
+			"FAIT;"
+		],
+		"description": "tant que"
+	},
+	"Si": {
+		"prefix": "si",
+		"body": [
+			"SI ('$condition')",
+			"ALORS",
+			"\t$instruction",
+
+			"FIN SI;"
+		],
+		"description": "si"
+	},
+	"Si sinon": {
+		"prefix": "sis",
+		"body": [
+			"SI ('$condition')",
+			"ALORS",
+			"\t$instruction",
+			"SINON",
+			"\t$instruction",
+			"FIN SI;"
+		],
+		"description": "si sinon"
+	},
+	"Selon que": {
+		"prefix": "sel",
+		"body": [
+			"SELON QUE ('$condition') VAUT",
+			"\t$cas1:",
+			"\t\t$instruction",
+			"SINON",
+			"\t$instruction"
+		],
+		"description": "selon que"
+	},
+	"Pour" : {
+		"prefix": "pour",
+		"body": [
+			"POUR I VARIANT DE ('$echelle') FAIRE",
+			"\t$instruction",
+			"FAIT;"
+		],
+		"description": "pour"
+	},
+	"Programme": {
+		"prefix": "prg",
+		"body": [
+			"PROGRAMME $nom_du_programme",
+			"DEBUT",
+			"\t$instruction",
+			"FIN;"
+		],
+		"description": "programme"
+	},
+	"Ecrire" : {
+		"prefix": "ecr",
+		"body": [
+			"ECRIRE ($ecrire)"
+		],
+		"description": "ecrire"
+	},
+	"Ecrire et lire" : {
+		"prefix": "ecrli",
+		"body": [
+			"ECRIRE ($ecrire)",
+			"LIRE($var)"
+		],
+		"description": "ecrire et lire"
+	},
+	"Fonction" : {
+		"prefix": "fonct",
+		"body": [
+			"FONCTION $nom_fonction ($param1:$type_param1,$param2:$type_param2) : $type_retour;",
+			"DEBUT {$nom_fonction}",
+			"\t $corp_de_la_fonction",
+			"FIN; {$nom_fonction}"
+		],
+		"description": "fonction"
+	},
+	"Procedure" : {
+		"prefix": "proced",
+		"body": [
+			"PROCEDURE $nom_procedure ($param1:$type_param1,$param2:$type_param2);",
+			"DEBUT {$nom_procedure}",
+			"\t $corp_de_la_procedure",
+			"FIN; {$nom_procedure}"
+		],
+		"description": "procedure"
+	}
+
+	
+
+}
